@@ -298,3 +298,5 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE.txt)
 - **[Chen](https://github.com/TheMartyrAmbiguousFable)**: Database management, security features, and incorporation of the least difficult backdoor (Backdoor Number 1).
 - **[Sabrina](https://github.com/Sabrinaafrine)**: Testing, performance optimization, documentation, and backdoor exploitation.
 - Third-party libraries and resources used in this project.
+- Sincere appreciation to the professor and tutours for their expert guidance in the development of this project.
+- The collaborative efforts and valuable contributions of our peers throughout the development process.
