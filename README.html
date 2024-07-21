@@ -382,7 +382,7 @@ code {
 <li><a href="#installation-instructions">Installation Instructions</a></li>
 <li><a href="#usage-guide">Usage Guide</a></li>
 <li><a href="#configuration">Configuration</a></li>
-<li><a href="#websocket-protocol-details">Server-to-Server Testing (Successful with Group 3,4,8,11)</a></li>
+<li><a href="#server-to-server-testing">Server-to-Server Testing (Successful with Group 3,4,8,11)</a></li>
 <li><a href="#security-considerations">Security Considerations</a></li>
 <li><a href="#performance-optimization-techniques">Performance Optimization Techniques</a></li>
 <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -519,6 +519,12 @@ node .\index.js <span class="hljs-comment">#For Windows</span>
 <pre class="hljs"><code><div><span class="hljs-built_in">cd</span> ../SCCSChatRoom
 npm run dev
 </div></code></pre>
+<h3 id="users-account-database-reset-optional">Users Account Database Reset (Optional)</h3>
+<p>To reset the database containing all user information, execute the following commands:</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> ./JsServer/database
+node ./initDatabase.js <span class="hljs-comment">#For Mac / Linux</span>
+node .\initDatabase.js <span class="hljs-comment">#For Windows</span>
+</div></code></pre>
 <h2 id="sccs-chatroom-application-loginsign-up-window">SCCS Chatroom Application Login/Sign up Window</h2>
 <p>After successful installation of dependencies, the SCCS chatroom application presents a user-friendly login interface with a welcome message. The login screen includes the following fields:</p>
 <ul>
@@ -537,7 +543,7 @@ npm run dev
 <h3 id="login-process">Login Process</h3>
 <p>After successfully creating an account, click the login button to access the application. Upon successful authentication, the SCCS chatroom window will appear. If login fails, an error message will be displayed.</p>
 <p><img src="Readme_Images/Login failed.png" alt="Login failed"></p>
-<h2 id="application-chatroom-interface">Application Chatroom Interface</h2>
+<h3 id="application-chatroom-interface">Application Chatroom Interface</h3>
 <p>The SCCS chatroom interface features a dual-panel design, with the user list on the left and the chat area on the right. Key features include:</p>
 <ol>
 <li>
@@ -564,6 +570,36 @@ c. <em>File Sending:</em> Use the send button to transmit the attached file.</p>
 </ol>
 <p><img src="Readme_Images/SCCS Chatroom.png" alt="Chatroom"></p>
 <p><img src="Readme_Images/SCCS Chatting.png" alt="Chatting"></p>
+<h3 id="chatroom-quitrestart-process">Chatroom Quit/Restart Process</h3>
+<p>To exit the SCCSChatroom application and restart the client:</p>
+<ol>
+<li>
+<p>Exit the application:</p>
+<ul>
+<li><strong>Windows users:</strong> Close the chatroom by clicking the 'X' button in the top-right corner of the window.</li>
+<li><strong>macOS users:</strong> Use the keyboard shortcut 'Command + Q' to properly exit and stop the client.</li>
+</ul>
+</li>
+<li>
+<p>Restart the client:
+After exiting, restart the client with the following command</p>
+</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> ../SCCSChatRoom
+npm run dev
+</div></code></pre>
+<h3 id="compiling-sccs-chatroom-executable-optional">Compiling SCCS Chatroom Executable (Optional)</h3>
+<p>To create an executable file (.exe for Windows or .elf for Unix-based systems) of the SCCS Chatroom client for easier startup:</p>
+<ol>
+<li>Build the executable using the following commands:</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> ../SCCSChatRoom
+npm run dev
+</div></code></pre>
+<ol start="2">
+<li>Once built, you can launch the chatroom by simply clicking on the generated executable file.</li>
+</ol>
+<p><strong>Note:</strong> Executable files may trigger security warnings on some systems. Ensure you trust the source before running.</p>
 <h2 id="configuration-for-server-to-server-s2s">Configuration For Server-to-Server (S2S)</h2>
 <p>In order to enable cross-server communication, add the domain and IP address of the other groups' servers in the configuration file. This is shown in the example below, where the details of groups 11, 3, 4, 6, and 2 are added. Settings for the server are found in <code>JsServer/configuration.json</code>. Adjust these settings to suit your environment after connecting to the same subnet in the network.</p>
 <pre class="hljs"><code><div>{
@@ -616,6 +652,7 @@ c. <em>File Sending:</em> Use the send button to transmit the attached file.</p>
 </ul>
 <h2 id="troublingshooting-guide">Troublingshooting Guide</h2>
 <ul>
+<li>In case of WebSocket connections' instability, if you experience problems sending or receiving messages, log out of the chatroom and then log in again to re-establish the connection.</li>
 <li>Use appropriate commands for your operating system (macOS or Windows), as syntax and file paths may differ between platforms.</li>
 <li>Ensure Node.js and npm are updated to the latest compatible versions to avoid dependency conflicts and leverage new features.</li>
 <li>Maintain the original file and directory structure of the project to prevent import errors and ensure proper functionality.</li>

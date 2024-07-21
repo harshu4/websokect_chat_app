@@ -11,15 +11,15 @@
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
 4. [Protocol Stack](#protocol-stack) 
-4. [Project Structure](#project-structure)
-5. [App Architecture](#app-architecture)
-5. [Installation Instructions](#installation-instructions)
-6. [Usage Guide](#usage-guide)
-7. [Configuration](#configuration)
-8. [Server-to-Server Testing (Successful with Group 3,4,8,11)](#websocket-protocol-details)
-10. [Security Considerations](#security-considerations)
-11. [Performance Optimization Techniques](#performance-optimization-techniques)
-15. [Acknowledgments](#acknowledgments)
+5. [Project Structure](#project-structure)
+6. [App Architecture](#app-architecture)
+7. [Installation Instructions](#installation-instructions)
+8. [Usage Guide](#usage-guide)
+9. [Configuration](#configuration)
+10. [Server-to-Server Testing (Successful with Group 3,4,8,11)](#server-to-server-testing)
+11. [Security Considerations](#security-considerations)
+12. [Performance Optimization Techniques](#performance-optimization-techniques)
+13. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
@@ -175,6 +175,13 @@ cd ../SCCSChatRoom
 npm run dev
 ```
 
+### Users Account Database Reset (Optional)
+To reset the database containing all user information, execute the following commands:
+```bash
+cd ./JsServer/database
+node ./initDatabase.js #For Mac / Linux
+node .\initDatabase.js #For Windows
+```
 ## SCCS Chatroom Application Login/Sign up Window
 
 After successful installation of dependencies, the SCCS chatroom application presents a user-friendly login interface with a welcome message. The login screen includes the following fields:
@@ -203,7 +210,7 @@ After successfully creating an account, click the login button to access the app
 
 ![Login failed](<Readme_Images/Login failed.png>)
 
-## Application Chatroom Interface
+### Application Chatroom Interface
 
 The SCCS chatroom interface features a dual-panel design, with the user list on the left and the chat area on the right. Key features include:
  
@@ -226,6 +233,33 @@ c. _File Sending:_ Use the send button to transmit the attached file.
 ![Chatroom](<Readme_Images/SCCS Chatroom.png>)
 
 ![Chatting](<Readme_Images/SCCS Chatting.png>)
+
+### Chatroom Quit/Restart Process
+
+To exit the SCCSChatroom application and restart the client:
+
+1. Exit the application:
+    - **Windows users:** Close the chatroom by clicking the 'X' button in the top-right corner of the window.
+    - **macOS users:** Use the keyboard shortcut 'Command + Q' to properly exit and stop the client.
+
+2. Restart the client:
+After exiting, restart the client with the following command
+```bash
+cd ../SCCSChatRoom
+npm run dev
+```
+### Compiling SCCS Chatroom Executable (Optional)
+To create an executable file (.exe for Windows or .elf for Unix-based systems) of the SCCS Chatroom client for easier startup:
+
+1. Build the executable using the following commands:
+```bash
+cd ../SCCSChatRoom
+npm run dev
+```
+2. Once built, you can launch the chatroom by simply clicking on the generated executable file.
+
+**Note:** Executable files may trigger security warnings on some systems. Ensure you trust the source before running.
+
 
 ## Configuration For Server-to-Server (S2S)
 
@@ -283,6 +317,7 @@ Our team has conducted interoperability tests with 9 other groups to verify serv
 
 ## Troublingshooting Guide
 
+- In case of WebSocket connections' instability, if you experience problems sending or receiving messages, log out of the chatroom and then log in again to re-establish the connection.
 - Use appropriate commands for your operating system (macOS or Windows), as syntax and file paths may differ between platforms.
 - Ensure Node.js and npm are updated to the latest compatible versions to avoid dependency conflicts and leverage new features.
 - Maintain the original file and directory structure of the project to prevent import errors and ensure proper functionality.
