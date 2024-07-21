@@ -178,7 +178,7 @@ npm run dev
 
 ## SCCS Chatroom Application Login/Sign up Window
 
-After suceesfully install dependan, the SCCS chatroom application presents a user-friendly login interface with a welcom message. The login screen includes the following fields:
+After successful installation of dependencies, the SCCS chatroom application presents a user-friendly login interface with a welcom message. The login screen includes the following fields:
 
 - **Nickname (Optional):** Users can enter a preferred nickname.
 - **Username:** Required field for the user's account name.
