@@ -24,7 +24,7 @@
 
 ## Introduction
 
-This project is a WebSocket-based overlay chat application ([github repo](<https://github.com/Shahzeb892/Chat_App_WebSocket.git>)) utilizing customized protocol, inspired from XMPP, for real-time messaging for inter and intra groups communication. This application has a server implemented in Node.js and a client application built with Electron and Vue.js, designed to offer end-to-end encrypted and efficient communication in both group and private chat with user-friendliy UI. Morver, The application aims to provide a seamless and responsive user experience across different platforms including Windows, macOS, and Linux.
+This project is a WebSocket-based overlay chat application ([github repo](<https://github.com/Shahzeb892/Chat_App_WebSocket.git>)) utilizing customized protocol, inspired from XMPP, for real-time messaging for inter and intra groups communication. This application has a server implemented in Node.js and a client application built with Electron and Vue.js, designed to offer end-to-end encrypted and efficient communication in both group and private chat with user-friendly UI. Moreover, the application aims to provide a seamless and responsive user experience across different platforms including Windows, macOS, and Linux.
 
 ## Features
 The chat application has following features:
@@ -99,7 +99,7 @@ Below is the protocol stack used in the Chat application:
 
 ## App Architecture
 
-The follow diagrams explains the workflow of client and server code with functions and attribute details in each script/file.
+The follow diagrams explain the workflow of client and server code with functions and attribute details in each script/file.
 
 ![Client Side Code](<Readme_Images/Client End.png>)
 
@@ -116,7 +116,7 @@ The follow diagrams explains the workflow of client and server code with functio
    ```bash
    install nodejs from https://nodejs.org/en/download/package-manager
    ```
-   If there is a start error then run the following commad to install the npm CLI globally.
+   If there is a start error then run the following command to install the npm CLI globally.
 
    ```bash
    npm install -g npm
@@ -179,13 +179,13 @@ npm run dev
 
 ## SCCS Chatroom Application Login/Sign up Window
 
-After successful installation of dependencies, the SCCS chatroom application presents a user-friendly login interface with a welcom message. The login screen includes the following fields:
+After successful installation of dependencies, the SCCS chatroom application presents a user-friendly login interface with a welcome message. The login screen includes the following fields:
 
 - **Nickname (Optional):** Users can enter a preferred nickname.
 - **Username:** Required field for the user's account name.
 - **Password:** User's password must be atleast 8 characters.
 - **Server IP:** IP address of the SCCSchat server.
-- **Server Port:** The default port number is **_4567_** for client-server couumunication, therefore, It is recommended to maintain this configuration unless there is a specific requirement to establish communication on an alternative port.
+- **Server Port:** The default port number is **_4567_** for client-server couumunication, therefore, it is recommended to maintain this configuration unless there is a specific requirement to establish communication on an alternative port.
 
 ![alt text](Readme_Images/login.png)
 
@@ -195,7 +195,7 @@ In order to create an account, enter a unique username, a password (minimum 8 ch
 
 ![Sign up](<Readme_Images/Sign up.png>)
 
-If any errors occur or invalid information is entered during the registration process, error messages will be displayed as shown below, indicating the specific reason for the account creation failure.
+If any error occurs or invalid information is entered during the registration process, error messages will be displayed as shown below, indicating the specific reason for the account creation failure.
 
 ![Sign up failure](<Readme_Images/Sign up failed.png>)
 
@@ -229,7 +229,7 @@ c. _File Sending:_ Use the send button to transmit the attached file.
 
 ## Configuration For Server-to-Server (S2S)
 
-In order to enable cross-server communication, add the domain and IP address of the other groups' servers in the configuration file. This is shown in the example below, where the details of groups 11, 3, 4, 6, and 2 are added. settings for the server are found in `JsServer/configuration.json`. Adjust these settings to suit your environment after connecting to the same subnet in the network.
+In order to enable cross-server communication, add the domain and IP address of the other groups' servers in the configuration file. This is shown in the example below, where the details of groups 11, 3, 4, 6, and 2 are added. Settings for the server are found in `JsServer/configuration.json`. Adjust these settings to suit your environment after connecting to the same subnet in the network.
 
 ```json
 {
@@ -267,7 +267,7 @@ In order to enable cross-server communication, add the domain and IP address of 
 
 ## Security Considerations
 
-- **Encryption:** All messages are end-to-encd encrypted
+- **Encryption:** All messages are end-to-end encrypted
 - **Environment Variables:** Stored sensitive data like encryption keys in environment variables.
 - **Authentication:** Implemented strong passwords policy and *secure remote protocol* is employed for autentication.
 - **Validation:** Ensured proper validation and sanitization of all user inputs.
