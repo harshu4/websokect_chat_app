@@ -268,7 +268,7 @@ In order to enable cross-server communication, add the domain and IP address of 
 
 - **Encryption:** All messages are end-to-encd encrypted
 - **Environment Variables:** Stored sensitive data like encryption keys in environment variables.
-- **Authentication:** Implemented strong passwords policy and *secure remote protocol8 is employed for autentication.
+- **Authentication:** Implemented strong passwords policy and *secure remote protocol* is employed for autentication.
 - **Validation:** Ensured proper validation and sanitization of all user inputs.
 - **Secure Data Storage** Passwords are hashed with salt then stored in the database.
 
