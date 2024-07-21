@@ -274,7 +274,7 @@ In order to enable cross-server communication, add the domain and IP address of 
 
 ## License Information
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE.txt) file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgments
 
