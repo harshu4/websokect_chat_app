@@ -61,25 +61,40 @@ Below is the protocol stack used in the Chat application:
 
 ## Project Structure
 
-📂 **XMPPChatroom-main/**  
-├── 📁 **JsServer/**                *Server-side code*  
-│   ├── 📁 **client/**              *Client service logic*  
-│   ├── 📁 **database/**            *Database scripts and files*  
-│   ├── 📁 **server/**              *Server service logic*  
-│   ├── 📁 **task/**                *Task queue management*  
-│   ├── 📁 **util/**                *Utility functions*  
-│   ├── 📁 **test/**                *Test scripts*  
-│   ├── 📄 **configuration.json**   *Server configuration*  
-│   ├── 📄 **index.js**             *Entry point for the server*  
-│   ├── 📄 **package.json**         *NPM dependencies and scripts*  
-│   └── 📄 **package-lock.json**    *Lock file for NPM dependencies*  
-└── 📁 **SCCSChatRoom/**            *Client-side code*  
-    ├── 📁 **build/**               *Build resources*  
-    ├── 📁 **resources/**           *Static resources*  
-    └── 📁 **src/**                 *Source code*  
-        ├── 📁 **main/**            *Main process*  
-        ├── 📁 **preload/**         *Preload scripts*  
-        └── 📁 **renderer/**        *Renderer process (Vue.js application)*  
+📂 **websokect_chat_app-main/**  
+├── 📄 .gitignore  
+├── 📁 **JsServer/** Server-side code  
+│ ├── 📁 .cache/ Cache files  
+│ │ └── 📁 .../ Various cache files  
+│ ├── 📁 client/ Client service logic  
+│ ├── 📁 database/ Database scripts and files  
+│ ├── 📁 server/ Server service logic  
+│ ├── 📁 task/ Task queue management  
+│ ├── 📁 util/ Utility functions  
+│ ├── 📄 configuration.json     / Server configuration  
+│ ├── 📄 index.js/ Entry point for the server  
+│ ├── 📄 init_linux.bash  
+│ ├── 📄 init_windows.bat  
+│ ├── 📄 package.json/ NPM dependencies and scripts  
+│ └── 📄 package-lock.json/ Lock file for NPM dependencies  
+├── 📁 **SCCSChatRoom/** Client-side code  
+│ ├── 📁 build/ Build resources  
+│ ├── 📁 resources/ Static resources   
+│ ├── 📁 src/ Source code  
+│ │ ├── 📁 main/ Main process  
+│ │ ├── 📁 preload/ Preload scripts  
+│ │ ├── 📁 renderer/ Renderer process (Vue.js application)  
+│ │ │ ├── 📁 assets/  
+│ │ │ ├── 📁 components/  
+│ │ │ ├── 📁 utils/  
+│ │ │ └── 📁 views/  
+│ ├── 📁 .vscode/ VS Code configuration  
+│ ├── 📄 electron-builder.yml  
+│ ├── 📄 electron.vite.config.mjs  
+│ ├── 📄 package.json  
+│ ├── 📄 package-lock.json  
+│ ├── 📄 run_linux.bash  
+│ ├── 📄 run_windows.bat    
 
 ## App Architecture
 
@@ -274,7 +289,7 @@ In order to enable cross-server communication, add the domain and IP address of 
 
 ## License Information
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE.txt) file for details.
 
 ## Acknowledgments
 
