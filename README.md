@@ -11,13 +11,12 @@
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
 4. [Protocol Stack](#protocol-stack) 
-
 4. [Project Structure](#project-structure)
 5. [App Architecture](#app-architecture)
 5. [Installation Instructions](#installation-instructions)
 6. [Usage Guide](#usage-guide)
 7. [Configuration](#configuration)
-8. [WebSocket Protocol Details](#websocket-protocol-details)
+8. [Server-to-Server Testing (Group 3,4,8,11)](#websocket-protocol-details)
 10. [Security Considerations](#security-considerations)
 11. [Performance Optimization Techniques](#performance-optimization-techniques)
 15. [Acknowledgments](#acknowledgments)
@@ -92,10 +91,15 @@ Below is the protocol stack used in the Chat application:
 │ ├── 📁 .vscode/ _VS Code configuration_  
 │ ├── 📄 electron-builder.yml  
 │ ├── 📄 electron.vite.config.mjs  
+│ ├── 📄 init_linux.bash     
+│ ├── 📄 init_windows.bat
 │ ├── 📄 package.json  
 │ ├── 📄 package-lock.json  
 │ ├── 📄 run_linux.bash  
-│ ├── 📄 run_windows.bat    
+│ ├── 📄 run_windows.bat 
+├── 📄 README.md
+├── 📄 README.html
+├── 📄 LICENSE   
 
 ## App Architecture
 
@@ -203,7 +207,7 @@ If any errors occur or invalid information is entered during the registration pr
 
 After successfully creating an account, click the login button to access the application. Upon successful authentication, the SCCS chatroom window will appear. If login fails, an error message will be displayed. 
 
-![alt text](<Readme_Images/Login failed.png>)
+![Login failed](<Readme_Images/Login failed.png>)
 
 ## Application Chatroom Interface
 
@@ -225,7 +229,9 @@ a. _Attachment Selection:_ Click the arrow icon adjacent to the send button to c
 b. _File Size Limitation:_ Ensures attached files do not exceed 10 KB.  
 c. _File Sending:_ Use the send button to transmit the attached file.
 
-![alt text](<Readme_Images/SCCS Chatroom.png>)
+![Chatroom](<Readme_Images/SCCS Chatroom.png>)
+
+![Chatting](<Readme_Images/SCCS Chatting.png>)
 
 ## Configuration For Server-to-Server (S2S)
 
@@ -263,7 +269,8 @@ In order to enable cross-server communication, add the domain and IP address of 
   "defaultClientPort": "4567",
   "defaultDomainName": "s1",
 }
-```  
+``` 
+## Server-to
 
 ## Security Considerations
 
