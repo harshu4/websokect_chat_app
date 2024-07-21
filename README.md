@@ -305,7 +305,7 @@ Our team has conducted interoperability tests with 9 other groups to verify serv
 
 ## Security Considerations
 
-- **Encryption:** All messages are end-to-end encrypted
+- **Encryption:** All messages are end-to-end encrypted.
 - **Environment Variables:** Stored sensitive data like encryption keys in environment variables.
 - **Authentication:** Implemented strong passwords policy and *secure remote protocol* is employed for autentication.
 - **Validation:** Ensured proper validation and sanitization of all user inputs.
