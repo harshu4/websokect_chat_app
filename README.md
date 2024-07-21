@@ -301,7 +301,7 @@ In order to enable cross-server communication, add the domain and IP address of 
 }
 ``` 
 ## Server-to-Server Testing
-Our team has conducted interoperability tests with 9 other groups to verify server-to-server communication capabilities. As of our most recent evaluation on Sunday, our application demonstrates successful connectivity and communication with groups 3, 4, 8, and 11. 
+Our team has conducted interoperability tests with 9 other groups to verify server-to-server communication capabilities. As of our most recent evaluation on Sunday, our application demonstrates successful connectivity and communication with groups 3, 4, 10, and 11. 
 
 ## Security Considerations
 
