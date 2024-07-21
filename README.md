@@ -91,8 +91,8 @@ Below is the protocol stack used in the Chat application:
 │ ├── 📄 electron.vite.config.mjs  
 │ ├── 📄 package.json  
 │ ├── 📄 package-lock.json  
-├── 📄 README.md
-├── 📄 README.html
+├── 📄 README.md  
+├── 📄 README.html  
 ├── 📄 LICENSE   
 
 ## App Architecture
@@ -232,6 +232,8 @@ c. _File Sending:_ Use the send button to transmit the attached file.
 
 ![Chatroom](<Readme_Images/SCCS Chatroom.png>)
 
+This following image illustrates the messaging and file transfer capabilities when communicating with an individual user in the SCCS Chatroom application.
+
 ![Chatting](<Readme_Images/SCCS Chatting.png>)
 
 ### Chatroom Quit/Restart Process
@@ -243,7 +245,7 @@ To exit the SCCSChatroom application and restart the client:
     - **macOS users:** Use the keyboard shortcut 'Command + Q' to properly exit and stop the client.
 
 2. Restart the client:
-After exiting, restart the client with the following command
+After exiting, restart the client with the following commands:
 ```bash
 cd ../SCCSChatRoom
 npm run dev
@@ -317,7 +319,7 @@ Our team has conducted interoperability tests with 9 other groups to verify serv
 
 ## Troublingshooting Guide
 
-- In case of WebSocket connections' instability, if you experience problems sending or receiving messages, log out of the chatroom and then log in again to re-establish the connection.
+- In case of WebSocket connections' instability, if there are problems sending or receiving messages, log out of the chatroom and then log in again to re-establish the connection.
 - Use appropriate commands for your operating system (macOS or Windows), as syntax and file paths may differ between platforms.
 - Ensure Node.js and npm are updated to the latest compatible versions to avoid dependency conflicts and leverage new features.
 - Maintain the original file and directory structure of the project to prevent import errors and ensure proper functionality.
@@ -335,6 +337,6 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE.txt)
 - **[Shahzeb](https://github.com/Shahzeb892)**: Client-side implementation, UI design, and incorporation of the moderately difficult backdoor (Backdoor Number 2).
 - **[Chen](https://github.com/TheMartyrAmbiguousFable)**: Database management, security features, and incorporation of the least difficult backdoor (Backdoor Number 1).
 - **[Sabrina](https://github.com/Sabrinaafrine)**: Testing, performance optimization, documentation, and backdoor exploitation.
-- Third-party libraries and resources used in this project.
 - Sincere appreciation to the professor and tutours for their expert guidance in the development of this project.
 - The collaborative efforts and valuable contributions of our peers throughout the development process.
+- Third-party libraries and resources used in this project.
