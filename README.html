@@ -382,13 +382,13 @@ code {
 <li><a href="#installation-instructions">Installation Instructions</a></li>
 <li><a href="#usage-guide">Usage Guide</a></li>
 <li><a href="#configuration">Configuration</a></li>
-<li><a href="#websocket-protocol-details">WebSocket Protocol Details</a></li>
+<li><a href="#websocket-protocol-details">Server-to-Server Testing (Successful with Group 3,4,8,11)</a></li>
 <li><a href="#security-considerations">Security Considerations</a></li>
 <li><a href="#performance-optimization-techniques">Performance Optimization Techniques</a></li>
 <li><a href="#acknowledgments">Acknowledgments</a></li>
 </ol>
 <h2 id="introduction">Introduction</h2>
-<p>This project is a WebSocket-based overlay chat application (<a href="https://github.com/Shahzeb892/Chat_App_WebSocket.git">github repo</a>) utilizing customized protocol, inspired from XMPP, for real-time messaging for inter and intra groups communication. This application has a server implemented in Node.js and a client application built with Electron and Vue.js, designed to offer end-to-end encrypted and efficient communication in both group and private chat with user-friendliy UI. Morver, The application aims to provide a seamless and responsive user experience across different platforms including Windows, macOS, and Linux.</p>
+<p>This project is a WebSocket-based overlay chat application (<a href="https://github.com/Shahzeb892/Chat_App_WebSocket.git">github repo</a>) utilizing customized protocol, inspired from XMPP, for real-time messaging for inter and intra groups communication. This application has a server implemented in Node.js and a client application built with Electron and Vue.js, designed to offer end-to-end encrypted and efficient communication in both group and private chat with user-friendly UI. Moreover, the application aims to provide a seamless and responsive user experience across different platforms including Windows, macOS, and Linux.</p>
 <h2 id="features">Features</h2>
 <p>The chat application has following features:</p>
 <ul>
@@ -441,8 +441,6 @@ code {
 │ ├── 📁 util/ <em>Utility functions</em><br>
 │ ├── 📄 configuration.json     / <em>Server configuration</em><br>
 │ ├── 📄 index.js/ <em>Entry point for the server</em><br>
-│ ├── 📄 init_linux.bash<br>
-│ ├── 📄 init_windows.bat<br>
 │ ├── 📄 package.json/ <em>NPM dependencies and scripts</em><br>
 │ └── 📄 package-lock.json/ <em>Lock file for NPM dependencies</em><br>
 ├── 📁 <strong>SCCSChatRoom/</strong> <em>Client-side code</em><br>
@@ -461,10 +459,11 @@ code {
 │ ├── 📄 electron.vite.config.mjs<br>
 │ ├── 📄 package.json<br>
 │ ├── 📄 package-lock.json<br>
-│ ├── 📄 run_linux.bash<br>
-│ ├── 📄 run_windows.bat</p>
+├── 📄 README.md
+├── 📄 README.html
+├── 📄 LICENSE</p>
 <h2 id="app-architecture">App Architecture</h2>
-<p>The follow diagrams explains the workflow of client and server code with functions and attribute details in each script/file.</p>
+<p>The follow diagrams explain the workflow of client and server code with functions and attribute details in each script/file.</p>
 <p><img src="Readme_Images/Client End.png" alt="Client Side Code"></p>
 <p><img src="Readme_Images/Server End.png" alt="Server Side Code"></p>
 <h2 id="installation-instructions">Installation Instructions</h2>
@@ -475,7 +474,7 @@ code {
 <h4 id="installing-nodejs--npm-on-windows">Installing Node.js / NPM On Windows:</h4>
 <pre class="hljs"><code><div>install nodejs from https://nodejs.org/en/download/package-manager
 </div></code></pre>
-<p>If there is a start error then run the following commad to install the npm CLI globally.</p>
+<p>If there is a start error then run the following command to install the npm CLI globally.</p>
 <pre class="hljs"><code><div>npm install -g npm
 </div></code></pre>
 <p>Verify the installation by opening a command prompt or PowerShell and running:</p>
@@ -521,23 +520,23 @@ node .\index.js <span class="hljs-comment">#For Windows</span>
 npm run dev
 </div></code></pre>
 <h2 id="sccs-chatroom-application-loginsign-up-window">SCCS Chatroom Application Login/Sign up Window</h2>
-<p>After successful installation of dependencies, the SCCS chatroom application presents a user-friendly login interface with a welcom message. The login screen includes the following fields:</p>
+<p>After successful installation of dependencies, the SCCS chatroom application presents a user-friendly login interface with a welcome message. The login screen includes the following fields:</p>
 <ul>
 <li><strong>Nickname (Optional):</strong> Users can enter a preferred nickname.</li>
 <li><strong>Username:</strong> Required field for the user's account name.</li>
 <li><strong>Password:</strong> User's password must be atleast 8 characters.</li>
 <li><strong>Server IP:</strong> IP address of the SCCSchat server.</li>
-<li><strong>Server Port:</strong> The default port number is <strong><em>4567</em></strong> for client-server couumunication, therefore, It is recommended to maintain this configuration unless there is a specific requirement to establish communication on an alternative port.</li>
+<li><strong>Server Port:</strong> The default port number is <strong><em>4567</em></strong> for client-server couumunication, therefore, it is recommended to maintain this configuration unless there is a specific requirement to establish communication on an alternative port.</li>
 </ul>
 <p><img src="Readme_Images/login.png" alt="alt text"></p>
 <h3 id="sign-up-process">Sign up Process</h3>
 <p>In order to create an account, enter a unique username, a password (minimum 8 characters), and the server IP address. Upon successful registration, a confirmation message will be displayed on the window as shown below.</p>
 <p><img src="Readme_Images/Sign up.png" alt="Sign up"></p>
-<p>If any errors occur or invalid information is entered during the registration process, error messages will be displayed as shown below, indicating the specific reason for the account creation failure.</p>
+<p>If any error occurs or invalid information is entered during the registration process, error messages will be displayed as shown below, indicating the specific reason for the account creation failure.</p>
 <p><img src="Readme_Images/Sign up failed.png" alt="Sign up failure"></p>
 <h3 id="login-process">Login Process</h3>
 <p>After successfully creating an account, click the login button to access the application. Upon successful authentication, the SCCS chatroom window will appear. If login fails, an error message will be displayed.</p>
-<p><img src="Readme_Images/Login failed.png" alt="alt text"></p>
+<p><img src="Readme_Images/Login failed.png" alt="Login failed"></p>
 <h2 id="application-chatroom-interface">Application Chatroom Interface</h2>
 <p>The SCCS chatroom interface features a dual-panel design, with the user list on the left and the chat area on the right. Key features include:</p>
 <ol>
@@ -563,9 +562,10 @@ b. <em>File Size Limitation:</em> Ensures attached files do not exceed 10 KB.<br
 c. <em>File Sending:</em> Use the send button to transmit the attached file.</p>
 </li>
 </ol>
-<p><img src="Readme_Images/SCCS Chatroom.png" alt="alt text"></p>
+<p><img src="Readme_Images/SCCS Chatroom.png" alt="Chatroom"></p>
+<p><img src="Readme_Images/SCCS Chatting.png" alt="Chatting"></p>
 <h2 id="configuration-for-server-to-server-s2s">Configuration For Server-to-Server (S2S)</h2>
-<p>In order to enable cross-server communication, add the domain and IP address of the other groups' servers in the configuration file. This is shown in the example below, where the details of groups 11, 3, 4, 6, and 2 are added. settings for the server are found in <code>JsServer/configuration.json</code>. Adjust these settings to suit your environment after connecting to the same subnet in the network.</p>
+<p>In order to enable cross-server communication, add the domain and IP address of the other groups' servers in the configuration file. This is shown in the example below, where the details of groups 11, 3, 4, 6, and 2 are added. Settings for the server are found in <code>JsServer/configuration.json</code>. Adjust these settings to suit your environment after connecting to the same subnet in the network.</p>
 <pre class="hljs"><code><div>{
     <span class="hljs-attr">"server"</span>: [
         {   # Other Groups Servers Details Examples
@@ -598,9 +598,11 @@ c. <em>File Sending:</em> Use the send button to transmit the attached file.</p>
   <span class="hljs-attr">"defaultDomainName"</span>: <span class="hljs-string">"s1"</span>,
 }
 </div></code></pre>
+<h2 id="server-to-server-testing">Server-to-Server Testing</h2>
+<p>Our team has conducted interoperability tests with 9 other groups to verify server-to-server communication capabilities. As of our most recent evaluation on Sunday, our application demonstrates successful connectivity and communication with groups 3, 4, 8, and 11.</p>
 <h2 id="security-considerations">Security Considerations</h2>
 <ul>
-<li><strong>Encryption:</strong> All messages are end-to-encd encrypted</li>
+<li><strong>Encryption:</strong> All messages are end-to-end encrypted</li>
 <li><strong>Environment Variables:</strong> Stored sensitive data like encryption keys in environment variables.</li>
 <li><strong>Authentication:</strong> Implemented strong passwords policy and <em>secure remote protocol</em> is employed for autentication.</li>
 <li><strong>Validation:</strong> Ensured proper validation and sanitization of all user inputs.</li>

@@ -16,7 +16,7 @@
 5. [Installation Instructions](#installation-instructions)
 6. [Usage Guide](#usage-guide)
 7. [Configuration](#configuration)
-8. [Server-to-Server Testing (Group 3,4,8,11)](#websocket-protocol-details)
+8. [Server-to-Server Testing (Successful with Group 3,4,8,11)](#websocket-protocol-details)
 10. [Security Considerations](#security-considerations)
 11. [Performance Optimization Techniques](#performance-optimization-techniques)
 15. [Acknowledgments](#acknowledgments)
@@ -72,9 +72,7 @@ Below is the protocol stack used in the Chat application:
 │ ├── 📁 task/ _Task queue management_  
 │ ├── 📁 util/ _Utility functions_  
 │ ├── 📄 configuration.json     / _Server configuration_  
-│ ├── 📄 index.js/ _Entry point for the server_  
-│ ├── 📄 init_linux.bash  
-│ ├── 📄 init_windows.bat  
+│ ├── 📄 index.js/ _Entry point for the server_   
 │ ├── 📄 package.json/ _NPM dependencies and scripts_  
 │ └── 📄 package-lock.json/ _Lock file for NPM dependencies_  
 ├── 📁 **SCCSChatRoom/** _Client-side code_  
@@ -266,7 +264,8 @@ In order to enable cross-server communication, add the domain and IP address of 
   "defaultDomainName": "s1",
 }
 ``` 
-## Server-to
+## Server-to-Server Testing
+Our team has conducted interoperability tests with 9 other groups to verify server-to-server communication capabilities. As of our most recent evaluation on Sunday, our application demonstrates successful connectivity and communication with groups 3, 4, 8, and 11. 
 
 ## Security Considerations
 
