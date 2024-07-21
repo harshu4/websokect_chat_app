@@ -63,32 +63,32 @@ Below is the protocol stack used in the Chat application:
 
 📂 **websokect_chat_app-main/**  
 ├── 📄 .gitignore  
-├── 📁 **JsServer/** Server-side code  
-│ ├── 📁 .cache/ Cache files  
-│ │ └── 📁 .../ Various cache files  
-│ ├── 📁 client/ Client service logic  
-│ ├── 📁 database/ Database scripts and files  
-│ ├── 📁 server/ Server service logic  
-│ ├── 📁 task/ Task queue management  
-│ ├── 📁 util/ Utility functions  
-│ ├── 📄 configuration.json     / Server configuration  
-│ ├── 📄 index.js/ Entry point for the server  
+├── 📁 **JsServer/** _Server-side code_  
+│ ├── 📁 .cache/ _Cache files_  
+│ │ └── 📁 .../ _Various cache files_  
+│ ├── 📁 client/ _Client service logic_  
+│ ├── 📁 database/ _Database scripts and files_  
+│ ├── 📁 server/ _Server service logic_  
+│ ├── 📁 task/ _Task queue management_  
+│ ├── 📁 util/ _Utility functions_  
+│ ├── 📄 configuration.json     / _Server configuration_  
+│ ├── 📄 index.js/ _Entry point for the server_  
 │ ├── 📄 init_linux.bash  
 │ ├── 📄 init_windows.bat  
-│ ├── 📄 package.json/ NPM dependencies and scripts  
-│ └── 📄 package-lock.json/ Lock file for NPM dependencies  
-├── 📁 **SCCSChatRoom/** Client-side code  
-│ ├── 📁 build/ Build resources  
-│ ├── 📁 resources/ Static resources   
-│ ├── 📁 src/ Source code  
-│ │ ├── 📁 main/ Main process  
-│ │ ├── 📁 preload/ Preload scripts  
-│ │ ├── 📁 renderer/ Renderer process (Vue.js application)  
+│ ├── 📄 package.json/ _NPM dependencies and scripts_  
+│ └── 📄 package-lock.json/ _Lock file for NPM dependencies_  
+├── 📁 **SCCSChatRoom/** _Client-side code_  
+│ ├── 📁 build/ _Build resources_  
+│ ├── 📁 resources/ _Static resources_   
+│ ├── 📁 src/ _Source code_  
+│ │ ├── 📁 main/ _Main process_  
+│ │ ├── 📁 preload/ _Preload scripts_  
+│ │ ├── 📁 renderer/ _Renderer process (Vue.js application)_  
 │ │ │ ├── 📁 assets/  
 │ │ │ ├── 📁 components/  
 │ │ │ ├── 📁 utils/  
 │ │ │ └── 📁 views/  
-│ ├── 📁 .vscode/ VS Code configuration  
+│ ├── 📁 .vscode/ _VS Code configuration_  
 │ ├── 📄 electron-builder.yml  
 │ ├── 📄 electron.vite.config.mjs  
 │ ├── 📄 package.json  
