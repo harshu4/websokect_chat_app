@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Readme_Group1_SCCS.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="websocket-based-sccs-chatroom-application">WebSocket-Based SCCS Chatroom Application</h1>
+<p><strong>Group 1
+- Zhihao Cheng
+- Shahzeb
+- Sabrina Afrine Sathi
+- Zhisong Chen</strong></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#technologies-used">Technologies Used</a></li>
+<li><a href="#protocol-stack">Protocol Stack</a></li>
+<li><a href="#project-structure">Project Structure</a></li>
+<li><a href="#app-architecture">App Architecture</a></li>
+<li><a href="#installation-instructions">Installation Instructions</a></li>
+<li><a href="#usage-guide">Usage Guide</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#websocket-protocol-details">WebSocket Protocol Details</a></li>
+<li><a href="#security-considerations">Security Considerations</a></li>
+<li><a href="#performance-optimization-techniques">Performance Optimization Techniques</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+</ol>
+<h2 id="introduction">Introduction</h2>
+<p>This project is a WebSocket-based overlay chat application (<a href="https://github.com/Shahzeb892/Chat_App_WebSocket.git">github repo</a>) utilizing customized protocol, inspired from XMPP, for real-time messaging for inter and intra groups communication. This application has a server implemented in Node.js and a client application built with Electron and Vue.js, designed to offer end-toend encrypted and efficient communication in both group and private chat with user-friendliy UI. Morver, The application aims to provide a seamless and responsive user experience across different platforms including Windows, macOS, and Linux.</p>
+<h2 id="features">Features</h2>
+<p>The chat application has following features:</p>
+<ul>
+<li>Real-time messaging using WebSockets</li>
+<li>User authentication and authorization</li>
+<li>Public and private chat rooms</li>
+<li>End-to-end message encryption and security</li>
+<li>Storage with SQLite database</li>
+<li>User-friendly interface with Electron and Vue.js</li>
+<li>Supports multiple user sessions</li>
+<li>Cross-platform support (Windows, macOS, Linux)</li>
+</ul>
+<h2 id="technologies-used">Technologies Used</h2>
+<ol>
+<li>
+<p><strong>Node.js:</strong> JavaScript runtime for server-side operations. Chosen for its efficient, event-driven architecture, ideal for real-time applications requiring high performance and scalability.</p>
+</li>
+<li>
+<p><strong>WebSocket:</strong> Full-duplex communication protocol over a single TCP connection enabling real-time, bi-directional data exchange between server and client with low latency.</p>
+</li>
+<li>
+<p><strong>Custom Protocols:</strong> Tailored messaging and presence protocols defined in <code>util/protocol.js</code> file and are used for managing the communication between the server and clients.</p>
+</li>
+<li>
+<p><strong>SQLite:</strong> Lightweight, disk-based database for storing user data and chat logs. Selected for its simplicity, reliability and ease of Node.js integration.</p>
+</li>
+<li>
+<p><strong>Electron:</strong> Framework for developing cross-platform desktop applications with JavaScript, HTML, and CSS using web technologies, combining Chromium and Node.js into a single runtime,.</p>
+</li>
+<li>
+<p><strong>Vue.js:</strong> Progressive JavaScript framework for building the responsive user interfaces, used to create the front-end due to its simplicity and reactive data-binding capabilitie.</p>
+</li>
+<li>
+<p><strong>NPM:</strong> Node Package Manager for efficient handling of project dependencies, facilitating easy installation and management of third-party libraries.</p>
+</li>
+</ol>
+<h2 id="protocol-stack">Protocol Stack</h2>
+<p>Below is the protocol stack used in the Chat application:</p>
+<p><img src="Readme_Images/Protocol Stack.png" alt="Protocol Stack"></p>
+<h2 id="project-structure">Project Structure</h2>
+<p>📂 <strong>XMPPChatroom-main/</strong><br>
+├── 📁 <strong>JsServer/</strong>                <em>Server-side code</em><br>
+│   ├── 📁 <strong>client/</strong>              <em>Client service logic</em><br>
+│   ├── 📁 <strong>database/</strong>            <em>Database scripts and files</em><br>
+│   ├── 📁 <strong>server/</strong>              <em>Server service logic</em><br>
+│   ├── 📁 <strong>task/</strong>                <em>Task queue management</em><br>
+│   ├── 📁 <strong>util/</strong>                <em>Utility functions</em><br>
+│   ├── 📁 <strong>test/</strong>                <em>Test scripts</em><br>
+│   ├── 📄 <strong>configuration.json</strong>   <em>Server configuration</em><br>
+│   ├── 📄 <strong>index.js</strong>             <em>Entry point for the server</em><br>
+│   ├── 📄 <strong>package.json</strong>         <em>NPM dependencies and scripts</em><br>
+│   └── 📄 <strong>package-lock.json</strong>    <em>Lock file for NPM dependencies</em><br>
+└── 📁 <strong>SCCSChatRoom/</strong>            <em>Client-side code</em><br>
+├── 📁 <strong>build/</strong>               <em>Build resources</em><br>
+├── 📁 <strong>resources/</strong>           <em>Static resources</em><br>
+└── 📁 <strong>src/</strong>                 <em>Source code</em><br>
+├── 📁 <strong>main/</strong>            <em>Main process</em><br>
+├── 📁 <strong>preload/</strong>         <em>Preload scripts</em><br>
+└── 📁 <strong>renderer/</strong>        <em>Renderer process (Vue.js application)</em></p>
+<h2 id="app-architecture">App Architecture</h2>
+<p>The follow diagrams explains the workflow of client and server code with functions and attribute details in each script/file.</p>
+<p><img src="Readme_Images/Client End.png" alt="Client Side Code"></p>
+<p><img src="Readme_Images/Server End.png" alt="Server Side Code"></p>
+<h2 id="installation-instructions">Installation Instructions</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ol>
+<li>Install Node.js v14.x or later (NPM v6.x or later)</li>
+</ol>
+<h4 id="installing-nodejs--npm-on-windows">Installing Node.js / NPM On Windows:</h4>
+<pre class="hljs"><code><div>install nodejs from https://nodejs.org/en/download/package-manager
+</div></code></pre>
+<p>If there is a start error then run the following commad to install the npm CLI globally.</p>
+<pre class="hljs"><code><div>npm install -g npm
+</div></code></pre>
+<p>Verify the installation by opening a command prompt or PowerShell and running:</p>
+<pre class="hljs"><code><div>node -v
+npm -v
+</div></code></pre>
+<h4 id="installing-nodejs--npm-on-mac">Installing Node.js / NPM On Mac:</h4>
+<pre class="hljs"><code><div>brew install node
+</div></code></pre>
+<p>Verify the installation by checking the versions of Node.js and npm.</p>
+<pre class="hljs"><code><div>node --version
+npm --version
+</div></code></pre>
+<h3 id="installation-steps">Installation Steps</h3>
+<ol start="2">
+<li>
+<p><strong>Clone Github Repo</strong></p>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/Shahzeb892/websokect_chat_app.git
+<span class="hljs-built_in">cd</span> websocket_chat_app
+</div></code></pre>
+</li>
+<li>
+<p><strong>Install server dependencies:</strong></p>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> JsServer
+npm install
+</div></code></pre>
+</li>
+<li>
+<p><strong>Install client dependencies:</strong></p>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> ../SCCSChatRoom
+npm install
+</div></code></pre>
+</li>
+</ol>
+<h2 id="app-usage-guide">App Usage Guide</h2>
+<h3 id="starting-the-server">Starting the Server</h3>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> ../JsServer
+node ./index.js <span class="hljs-comment">#For Mac / Linux</span>
+node .\index.js <span class="hljs-comment">#For Windows</span>
+</div></code></pre>
+<h3 id="starting-the-client-application">Starting the Client Application</h3>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> ../SCCSChatRoom
+npm run dev
+</div></code></pre>
+<h2 id="sccs-chatroom-application-loginsign-up-window">SCCS Chatroom Application Login/Sign up Window</h2>
+<p>After suceesfully install dependan, the SCCS chatroom application presents a user-friendly login interface with a welcom message. The login screen includes the following fields:</p>
+<ul>
+<li><strong>Nickname (Optional):</strong> Users can enter a preferred nickname.</li>
+<li><strong>Username:</strong> Required field for the user's account name.</li>
+<li><strong>Password:</strong> User's password must be atleast 8 characters.</li>
+<li><strong>Server IP:</strong> IP address of the SCCSchat server.</li>
+<li><strong>Server Port:</strong> The default port number is <strong><em>4567</em></strong> for client-server couumunication, therefore, It is recommended to maintain this configuration unless there is a specific requirement to establish communication on an alternative port.</li>
+</ul>
+<p><img src="Readme_Images/login.png" alt="alt text"></p>
+<h3 id="sign-up-process">Sign up Process</h3>
+<p>In order to create an account, enter a unique username, a password (minimum 8 characters), and the server IP address. Upon successful registration, a confirmation message will be displayed on the window as shown below.</p>
+<p><img src="Readme_Images/Sign up.png" alt="Sign up"></p>
+<p>If any errors occur or invalid information is entered during the registration process, error messages will be displayed as shown below, indicating the specific reason for the account creation failure.</p>
+<p><img src="Readme_Images/Sign up failed.png" alt="Sign up failure"></p>
+<h3 id="login-process">Login Process</h3>
+<p>After successfully creating an account, click the login button to access the application. Upon successful authentication, the SCCS chatroom window will appear. If login fails, an error message will be displayed.</p>
+<p><img src="Readme_Images/Login failed.png" alt="alt text"></p>
+<h2 id="application-chatroom-interface">Application Chatroom Interface</h2>
+<p>The SCCS chatroom interface features a dual-panel design, with the user list on the left and the chat area on the right. Key features include:</p>
+<ol>
+<li>
+<p><strong>User Information:</strong> Displays the client's nickname, JID and server IP at the top.</p>
+</li>
+<li>
+<p><strong>Public Chatroom:</strong> It is a group chat among all online users on the network.</p>
+</li>
+<li>
+<p><strong>Online Users List:</strong> Provides a real-time display of all currently connected users, including their nicknames and JIDs.</p>
+</li>
+<li>
+<p><strong>Messaging System:</strong><br>
+a. <em>User Selection:</em> Choose the recipient (individual user or public chatroom) before composing a message.<br>
+b. <em>Recipient Indicator:</em> The selected recipient's name is displayed at the top of the chat box.<br>
+c. <em>Send Functionality:</em> Click the &quot;Send&quot; button to transmit the message.</p>
+</li>
+<li>
+<p><strong>File Attachment:</strong><br>
+a. <em>Attachment Selection:</em> Click the arrow icon adjacent to the send button to choose a file.<br>
+b. <em>File Size Limitation:</em> Ensures attached files do not exceed 10 KB.<br>
+c. <em>File Sending:</em> Use the send button to transmit the attached file.</p>
+</li>
+</ol>
+<h2 id="configuration-for-server-to-server-s2s">Configuration For Server-to-Server (S2S)</h2>
+<p>In order to enable cross-server communication, add the domain and IP address of the other groups' servers in the configuration file. This is shown in the example below, where the details of groups 11, 3, 4, 6, and 2 are added. settings for the server are found in <code>JsServer/configuration.json</code>. Adjust these settings to suit your environment after connecting to the same subnet in the network.</p>
+<pre class="hljs"><code><div>{
+    <span class="hljs-attr">"server"</span>: [
+        {   # Other Groups Servers Details Examples
+            <span class="hljs-attr">"domain"</span>: <span class="hljs-string">"s11"</span>,                  
+            <span class="hljs-attr">"address"</span>:<span class="hljs-string">"10.13.101.178"</span>
+        },
+        {
+            <span class="hljs-attr">"domain"</span>: <span class="hljs-string">"s3"</span>,
+            <span class="hljs-attr">"address"</span>:<span class="hljs-string">"10.13.83.163"</span>
+        }
+        ,
+        {
+            <span class="hljs-attr">"domain"</span>: <span class="hljs-string">"s4"</span>,
+            <span class="hljs-attr">"address"</span>:<span class="hljs-string">"10.13.101.145"</span>
+        }
+        ,
+        {
+            <span class="hljs-attr">"domain"</span>: <span class="hljs-string">"s6"</span>,
+            <span class="hljs-attr">"address"</span>:<span class="hljs-string">"10.13.81.121"</span>
+        }
+        ,
+        {
+            <span class="hljs-attr">"domain"</span>: <span class="hljs-string">"s2"</span>,
+            <span class="hljs-attr">"address"</span>:<span class="hljs-string">"10.13.89.245"</span>
+        }
+  ],
+  # Application Server Details
+  <span class="hljs-attr">"defaultServerPort"</span>: <span class="hljs-string">"5555"</span>,
+  <span class="hljs-attr">"defaultClientPort"</span>: <span class="hljs-string">"4567"</span>,
+  <span class="hljs-attr">"defaultDomainName"</span>: <span class="hljs-string">"s1"</span>,
+}
+</div></code></pre>
+<h2 id="security-considerations">Security Considerations</h2>
+<ul>
+<li><strong>Encryption:</strong> All messages are end-to-encd encrypted</li>
+<li><strong>Environment Variables:</strong> Stored sensitive data like encryption keys in environment variables.</li>
+<li><strong>Authentication:</strong> Implemented strong passwords policy and *secure remote protocol8 is employed for autentication.</li>
+<li><strong>Validation:</strong> Ensured proper validation and sanitization of all user inputs.</li>
+<li><strong>Secure Data Storage</strong> Passwords are hashed with salt then stored in the database.</li>
+</ul>
+<h2 id="performance-optimization-techniques">Performance Optimization Techniques</h2>
+<ul>
+<li><strong>Task Queues:</strong> Use task queues to manage background tasks efficiently.</li>
+<li><strong>Database Indexing:</strong> Implement indexing in the SQLite database for faster query execution.</li>
+<li><strong>Connection Pooling:</strong> Use WebSocket connection pooling to manage multiple connections efficiently.</li>
+</ul>
+<h2 id="troublingshooting-guide">Troublingshooting Guide</h2>
+<ul>
+<li>Mac/Windows commands difference</li>
+<li>Updated Node/NPM version</li>
+<li>Don't change files files directories</li>
+</ul>
+<h2 id="license-information">License Information</h2>
+<p>This project is licensed under the MIT License. See the <a href="./LICENSE.txt">LICENSE</a> file for details.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<ul>
+<li><strong><a href="https://github.com/FrogGuaGua">Cheng</a></strong>: Initial project setup, server-side implementation, and incorporation of the most challenging backdoor (Backdoor Number 3).</li>
+<li><strong><a href="https://github.com/Shahzeb892">Shahzeb</a></strong>: Client-side implementation, UI design, and incorporation of the moderately difficult backdoor (Backdoor Number 2).</li>
+<li><strong><a href="https://github.com/TheMartyrAmbiguousFable">Chen</a></strong>: Database management, security features, and incorporation of the least difficult backdoor (Backdoor Number 1).</li>
+<li><strong><a href="https://github.com/Sabrinaafrine">Sabrina</a></strong>: Testing, performance optimization, documentation, and backdoor exploitation.</li>
+<li>Third-party libraries and resources used in this project.</li>
+</ul>
+
+</body>
+</html>
