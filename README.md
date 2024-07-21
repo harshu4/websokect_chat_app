@@ -256,7 +256,7 @@ To create an executable file (.exe for Windows or .elf for Unix-based systems) o
 1. Build the executable using the following commands:
 ```bash
 cd ../SCCSChatRoom
-npm run dev
+npm run build
 ```
 2. Once built, you can launch the chatroom by simply clicking on the generated executable file.
 
