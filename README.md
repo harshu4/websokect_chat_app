@@ -11,6 +11,7 @@
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
 4. [Protocol Stack](#protocol-stack) 
+
 4. [Project Structure](#project-structure)
 5. [App Architecture](#app-architecture)
 5. [Installation Instructions](#installation-instructions)
@@ -23,7 +24,7 @@
 
 ## Introduction
 
-This project is a WebSocket-based overlay chat application ([github repo](<https://github.com/Shahzeb892/Chat_App_WebSocket.git>)) utilizing customized protocol, inspired from XMPP, for real-time messaging for inter and intra groups communication. This application has a server implemented in Node.js and a client application built with Electron and Vue.js, designed to offer end-toend encrypted and efficient communication in both group and private chat with user-friendliy UI. Morver, The application aims to provide a seamless and responsive user experience across different platforms including Windows, macOS, and Linux.
+This project is a WebSocket-based overlay chat application ([github repo](<https://github.com/Shahzeb892/Chat_App_WebSocket.git>)) utilizing customized protocol, inspired from XMPP, for real-time messaging for inter and intra groups communication. This application has a server implemented in Node.js and a client application built with Electron and Vue.js, designed to offer end-to-end encrypted and efficient communication in both group and private chat with user-friendliy UI. Morver, The application aims to provide a seamless and responsive user experience across different platforms including Windows, macOS, and Linux.
 
 ## Features
 The chat application has following features:
