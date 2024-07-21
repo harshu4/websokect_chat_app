@@ -91,12 +91,8 @@ Below is the protocol stack used in the Chat application:
 │ ├── 📁 .vscode/ _VS Code configuration_  
 │ ├── 📄 electron-builder.yml  
 │ ├── 📄 electron.vite.config.mjs  
-│ ├── 📄 init_linux.bash     
-│ ├── 📄 init_windows.bat
 │ ├── 📄 package.json  
 │ ├── 📄 package-lock.json  
-│ ├── 📄 run_linux.bash  
-│ ├── 📄 run_windows.bat 
 ├── 📄 README.md
 ├── 📄 README.html
 ├── 📄 LICENSE   
